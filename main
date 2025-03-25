@@ -1,0 +1,75 @@
+import sys
+from PyQt5 import QtWidgets, uic
+
+# Import the generated UI file (from LV1.ui converted using pyuic5)
+from guisheets.LV1 import Ui_MainWindow
+
+# Import ciphers (Add more as needed)
+from ciphers.ceasar import ceasar_cipher
+from ciphers.fibceasar import fib_ceasar_cipher
+
+# Load the QSS stylesheet
+def load_stylesheet():
+    try:
+        with open('guisheets/styles.qss', 'r') as f:
+            return f.read()
+    except FileNotFoundError:
+        print("Stylesheet not found. Using default style.")
+        return ""
+
+# Main application class
+class MainWindow(QtWidgets.QMainWindow):
+    def __init__(self):
+        super(MainWindow, self).__init__()
+
+        # Load UI from the generated file
+        self.ui = Ui_MainWindow()
+        self.ui.setupUi(self)
+
+        # Apply stylesheet
+        self.setStyleSheet(load_stylesheet())
+
+        # Connect buttons
+        self.ui.executeButton.clicked.connect(self.run_cipher)
+
+    def run_cipher(self):
+        # Get user input from the GUI
+        plaintext = self.ui.inputText.toPlainText()
+        cipher_choice = self.ui.cipherBox.currentText()
+        use_substitution = self.ui.substitutionCheckBox.isChecked()
+        sub_choice = self.ui.substitutionBox.currentText()
+
+        # Validate input
+        if not plaintext.strip():
+            self.ui.outputText.setPlainText("Error: Input text is empty.")
+            return
+
+        try:
+            # Run selected cipher
+            if cipher_choice == 'Ceasar':
+                result = ceasar_cipher(plaintext)
+            elif cipher_choice == 'Fibonacci Ceasar':
+                result = fib_ceasar_cipher(plaintext)
+            else:
+                result = "Error: Cipher not implemented."
+
+            # Apply substitution if checked (substitution logic to be implemented)
+            if use_substitution:
+                result = apply_substitution(result, sub_choice)
+
+            # Display result
+            self.ui.outputText.setPlainText(result)
+        except Exception as e:
+            self.ui.outputText.setPlainText(f"Error: {e}")
+
+# Placeholder for substitution logic
+def apply_substitution(text, sub_choice):
+    # Implement substitution based on sub_choice (add later)
+    return text
+
+# Main entry point
+if __name__ == "__main__":
+    app = QtWidgets.QApplication(sys.argv)
+    window = MainWindow()
+    window.show()
+    sys.exit(app.exec_())
