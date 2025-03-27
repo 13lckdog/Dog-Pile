@@ -1,0 +1,93 @@
+/* === Main Window === */
+QMainWindow {
+    background-color: #101820;
+    color: #00FFFF;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* === Buttons === */
+QPushButton {
+    background-color: #00FFFF;
+    color: #101820;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    border: 2px solid #00FFFF;
+}
+
+QPushButton:hover {
+    background-color: #BB00FF;
+    color: #FFF;
+    border-color: #BB00FF;
+}
+
+QPushButton:pressed {
+    background-color: #282A36;
+    color: #FFF;
+}
+
+/* === Text Input === */
+QTextEdit, QLineEdit {
+    background-color: #282A36;
+    color: #00FFFF;
+    border: 2px solid #00FFFF;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+/* === Labels === */
+QLabel {
+    color: #00FFFF;
+    font-size: 14px;
+}
+
+/* === Radio Buttons === */
+QRadioButton {
+    color: #BB00FF;
+    font-size: 14px;
+}
+
+QRadioButton::indicator:checked {
+    background-color: #00FFFF;
+    border-radius: 50%;
+}
+
+QRadioButton::indicator {
+    border: 2px solid #00FFFF;
+    background-color: transparent;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+}
+
+/* === Checkboxes === */
+QCheckBox {
+    color: #BB00FF;
+    font-size: 14px;
+}
+
+QCheckBox::indicator:checked {
+    background-color: #00FFFF;
+    border: 2px solid #00FFFF;
+}
+
+QCheckBox::indicator {
+    border: 2px solid #00FFFF;
+    background-color: transparent;
+    width: 16px;
+    height: 16px;
+}
+
+/* === List Views === */
+QListWidget {
+    background-color: #282A36;
+    color: #00FFFF;
+    border-radius: 5px;
+    border: 2px solid #00FFFF;
+}
+
+QListWidget::item:selected {
+    background-color: #BB00FF;
+    color: #FFF;
+}

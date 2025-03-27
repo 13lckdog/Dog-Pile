@@ -23,7 +23,7 @@
    <bool>true</bool>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QTextEdit" name="txtInput">
+   <widget class="QPlainTextEdit" name="txtInput">
     <property name="geometry">
      <rect>
       <x>13</x>
@@ -260,7 +260,7 @@
      <string>...</string>
     </property>
    </widget>
-   <widget class="QTextBrowser" name="txtOutput">
+   <widget class="QPlainTextEdit" name="txtOutput">
     <property name="geometry">
      <rect>
       <x>20</x>

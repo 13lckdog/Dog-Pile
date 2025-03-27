@@ -1,0 +1,93 @@
+/* === Main Window === */
+QMainWindow {
+    background-color: #101820;
+    color: #BB00FF;  /* Cyan text */
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* === Buttons === */
+QPushButton {
+    background-color: #282A36;  /* Purple background */
+    color: #BB00FF;  /* Cyan text */
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    border: 2px solid #BB00FF;  /* Cyan border */
+}
+
+QPushButton:hover {
+    background-color: #00FFFF;  /* Cyan background on hover */
+    color: #FFF;  /* White text on hover */
+    border-color: #00FFFF;  /* Cyan border on hover */
+}
+
+QPushButton:pressed {
+    background-color: #101820;  /* Black background when pressed */
+    color: #BB00FF;  /* Cyan text when pressed */
+}
+
+/* === Text Input === */
+QTextEdit, QLineEdit {
+    background-color: #282A36;  /* Purple background */
+    color: #BB00FF;  /* Cyan text */
+    border: 2px solid #BB00FF;  /* Cyan border */
+    border-radius: 5px;
+    padding: 5px;
+}
+
+/* === Labels === */
+QLabel {
+    color: #BB00FF;  /* Cyan text */
+    font-size: 14px;
+}
+
+/* === Radio Buttons === */
+QRadioButton {
+    color: #BB00FF;  /* Cyan text */
+    font-size: 14px;
+}
+
+QRadioButton::indicator:checked {
+    background-color: #282A36;  /* Purple indicator */
+    border-radius: 50%;
+}
+
+QRadioButton::indicator {
+    border: 2px solid #BB00FF;  /* Cyan border */
+    background-color: transparent;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+}
+
+/* === Checkboxes === */
+QCheckBox {
+    color: #BB00FF;  /* Cyan text */
+    font-size: 14px;
+}
+
+QCheckBox::indicator:checked {
+    background-color: #282A36;  /* Purple indicator */
+    border: 2px solid #BB00FF;  /* Cyan border */
+}
+
+QCheckBox::indicator {
+    border: 2px solid #BB00FF;  /* Cyan border */
+    background-color: transparent;
+    width: 16px;
+    height: 16px;
+}
+
+/* === List Views === */
+QListWidget {
+    background-color: #282A36;  /* Purple background */
+    color: #BB00FF;  /* Cyan text */
+    border-radius: 5px;
+    border: 2px solid #BB00FF;  /* Cyan border */
+}
+
+QListWidget::item:selected {
+    background-color: #00FFFF;  /* Cyan background on selection */
+    color: #FFF;  /* White text on selection */
+}

@@ -7,7 +7,7 @@ def fibonacci_sequence(n):
         fib_seq.append(fib_seq[-1] + fib_seq[-2])
     return fib_seq[1:]  # Skip the initial 0
 
-def fib_caesar_cipher(text, key=None, mode="e"):
+def fib_ceasar_cipher(text, key=None, mode="e"):
     """Encrypts or decrypts text using a Fibonacci-based Caesar shift.
 
     Args:

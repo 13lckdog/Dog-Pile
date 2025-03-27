@@ -1,6 +1,6 @@
 import string
 
-def caesar_cipher(text, key, mode="e"):
+def ceasar_cipher(text, key, mode="e"):
     """Encrypts or decrypts text using a Caesar shift.
 
     Args:

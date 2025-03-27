@@ -12,10 +12,9 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_LV1Zyfrz(object):
     def setupUi(self, LV1Zyfrz):
         LV1Zyfrz.setObjectName("LV1Zyfrz")
-        LV1Zyfrz.resize(800, 600)
+        LV1Zyfrz.resize(800, 620)
         LV1Zyfrz.setTabShape(QtWidgets.QTabWidget.TabShape.Rounded)
-        LV1Zyfrz.setDockOptions(QtWidgets.QMainWindow.AllowTabbedDocks|QtWidgets.QMainWindow.AnimatedDocks)
-        LV1Zyfrz.setUnifiedTitleAndToolBarOnMac(True)
+        # LV1Zyfrz.setUnifiedTitleAndToolBarOnMac(True)
         self.centralwidget = QtWidgets.QWidget(parent=LV1Zyfrz)
         self.centralwidget.setObjectName("centralwidget")
         self.txtInput = QtWidgets.QTextEdit(parent=self.centralwidget)
